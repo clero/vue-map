@@ -1,4 +1,8 @@
-# map
+# Vue-Map
+
+## Environment
+
+**VUE_APP_OPENDATASOFT_APIKEY**: *Optional* Opendatasoft API key
 
 ## Project setup
 ```

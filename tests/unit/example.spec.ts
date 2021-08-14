@@ -1,12 +1,12 @@
 import { shallowMount } from '@vue/test-utils';
-import HelloWorld from '@/components/HelloWorld.vue';
+import Enterprises from '@/components/Enterprises.vue';
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message';
-    const wrapper = shallowMount(HelloWorld, {
-      props: { msg },
+describe('Enterprises.vue', () => {
+  it('renders props.enterprises when passed', () => {
+    const enterprises = [{ name: 'Chez Julou' }];
+    const wrapper = shallowMount(Enterprises, {
+      props: { enterprises },
     });
-    expect(wrapper.text()).toMatch(msg);
+    expect(wrapper.text()).toMatch(enterprises[0].name);
   });
 });

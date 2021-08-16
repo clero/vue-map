@@ -43,6 +43,7 @@
   >
     <button
       @click="() => handleSelect(possibility)"
+      :disabled="isDisabled"
       v-for="possibility in facet.possibilities"
       :key="possibility.name"
       class="
@@ -60,6 +61,7 @@
       "
       :class="{
         'bg-green-700 text-white': selection?.name === possibility.name,
+        'cursor-not-allowed': isDisabled,
       }"
     >
       <span>{{ possibility.name }}</span> <span>({{ possibility.count }})</span>
@@ -93,6 +95,11 @@ export default defineComponent({
     // Currently selected 'possibility'
     selection: {
       type: Object as PropType<FacetPossibility>,
+    },
+    // Allow to disable filters update
+    isDisabled: {
+      type: Boolean,
+      default: true,
     },
   },
   emits: Object.values(Events),

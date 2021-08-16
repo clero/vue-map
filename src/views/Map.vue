@@ -12,6 +12,7 @@
           :key="facet.name"
           v-for="facet in facets"
           :facet="facet"
+          :isDisabled="isLoading"
           v-model:selection="
             facetSelections.find(({ name }) => name === facet.name).selection
           "

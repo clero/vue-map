@@ -1,0 +1,12 @@
+@import "tailwindcss/base";
+@import "~leaflet/dist/leaflet.css";
+@import "~leaflet-draw/dist/leaflet.draw.css";
+
+/* Remove ugly default margin from Popup */
+.leaflet-popup-content p {
+  @apply m-0
+}
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
